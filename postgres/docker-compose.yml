@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-server
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sayyidmuhammad
+      POSTGRES_PASSWORD: rootpasstest
+      POSTGRES_DB: flash_sales
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data 
